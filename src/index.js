@@ -1,6 +1,3 @@
-import ReactDOM from 'react-dom/client';
-
-
 /* challenge:
 
 Part 1:  Create a page of your own using a custom Page component
@@ -12,26 +9,45 @@ excited to be learning React
 */
 
 
+import ReactDom from 'react-dom/client';
+import './styles.css'
 
 
-const WhyLearnReact = () => {
-  return (
-        <ol>
-            <li>Its popular</li>
-            <li>easier to build web applications</li>
-            <li> I CAN GET A JOB (: </li>
-        </ol>
-  )
+import Header from './Header.js'
+import MainContent from './MainContent';
+import Footer from './Footer';
+
+
+
+
+
+
+const App = () => {
+   return (
+    <>
+      <Header/>
+      <MainContent/>
+      <Footer/>
+  </>
+   )
 }
 
 
 
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
 
+
+
+
+const root = ReactDom.createRoot(document.getElementById('root'));
 
 root.render(
-    <WhyLearnReact/>
+<> 
+
+  <App/>
+
+  </>
+
 )
 
 
